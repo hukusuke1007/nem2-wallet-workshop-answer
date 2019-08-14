@@ -110,9 +110,6 @@ export class NamespaceDataSource implements NamespaceRepository {
   createNamespaceTxAggregate(privateKey: string, name: string, rentalBlock: number): any {
     const account = Account.createFromPrivateKey(privateKey, this.nemNode.network)
     // TODO: モザイク、ネームスペース作成（アグリゲートトランザクション
-    // return undefined
-
-    // commentout
     const registerNamespaceTransaction = RegisterNamespaceTransaction.createRootNamespace(
       Deadline.create(),
       name,
@@ -124,9 +121,6 @@ export class NamespaceDataSource implements NamespaceRepository {
   createMosaicToNamespaceTxAggregate(privateKey: string, namespace: string, mosaicName: string): any {
     const account = Account.createFromPrivateKey(privateKey, this.nemNode.network)
     // TODO: モザイク、ネームスペース作成（アグリゲートトランザクション
-    // return undefined
-
-    // commentout
     const mosaicAliasTransaction = AliasTransaction.createForMosaic(
       Deadline.create(),
       AliasActionType.Link,

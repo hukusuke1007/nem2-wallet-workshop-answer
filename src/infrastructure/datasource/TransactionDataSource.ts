@@ -32,9 +32,6 @@ export class TransactionDataSource implements TransactionRepository {
   async sendAsset(privateKey: string, asset: SendAsset): Promise<TransactionResult> {
     return new Promise((resolve, reject) => {
       // TODO: 送金
-      // resolve(undefined)
-
-      // commentout
       const recipientAddress = Address.createFromRawAddress(asset.address)
       const transferTransaction = TransferTransaction.create(
           Deadline.create(),

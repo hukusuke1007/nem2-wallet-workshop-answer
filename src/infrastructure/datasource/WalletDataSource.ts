@@ -24,9 +24,6 @@ export class WalletDataSource implements WalletRepository {
 
   async createWallet() {
     // TODO: ウォレット作成
-    // return new Wallet()
-
-    // commentout
     const account = Account.generateNewAccount(this.nemNode.network)
     const wallet = new Wallet(
       account.address.plain(),
@@ -40,9 +37,6 @@ export class WalletDataSource implements WalletRepository {
 
   async loadWallet() {
     // TODO: ウォレット作成
-    // return undefined
-
-    // commentout
     const item: any = await localForage.getItem(this.localStorageKey)
     if (item !== null) {
       return new Wallet(
@@ -74,9 +68,6 @@ export class WalletDataSource implements WalletRepository {
   async loadBalance(addr: string): Promise<AssetMosaic[]> {
     return new Promise((resolve, reject) => {
       // TODO: 残高取得
-      // resolve([])
-
-      // commentout
       const address = Address.createFromRawAddress(addr)
       this.mosaicService.mosaicsAmountViewFromAddress(address)
         .pipe(

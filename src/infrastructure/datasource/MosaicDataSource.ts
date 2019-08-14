@@ -45,9 +45,6 @@ export class MosaicDataSource implements MosaicRepository {
   createMosaicDefinitionTxAggregate(privateKey: string, asset: AssetCreation): MosaicAggregate {
     const account = Account.createFromPrivateKey(privateKey, this.nemNode.network)
     // TODO: モザイク、ネームスペース作成（アグリゲートトランザクション
-    // return new MosaicAggregate('', undefined)
-
-    // commentout
     const nonce = MosaicNonce.createRandom()
     const mosaicId = MosaicId.createFromNonce(nonce, account.publicAccount)
     const mosaicDefinitionTransaction = MosaicDefinitionTransaction.create(
@@ -67,8 +64,6 @@ export class MosaicDataSource implements MosaicRepository {
   createMosaicSupplyChangeTxAggregate(privateKey: string, mosaicId: string, maxAmount: number): any {
     const account = Account.createFromPrivateKey(privateKey, this.nemNode.network)
     // TODO: モザイク、ネームスペース作成（アグリゲートトランザクション
-
-    // commentout
     const mosaicSupplyChangeTransaction = MosaicSupplyChangeTransaction.create(
       Deadline.create(),
       new MosaicId(mosaicId),

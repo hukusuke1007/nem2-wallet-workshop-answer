@@ -8,11 +8,11 @@ self.__precacheManifest = [
     "url": "/nem2-wallet-workshop-answer/js/chunk-vendors.57d80686.js"
   },
   {
-    "revision": "e3f9f4c49d1bd76c8e14",
-    "url": "/nem2-wallet-workshop-answer/js/app.8c8767a0.js"
+    "revision": "f11033b7573573066ed6",
+    "url": "/nem2-wallet-workshop-answer/js/app.4bf03407.js"
   },
   {
-    "revision": "4c2d349ee223f3630e6588568a00e11d",
+    "revision": "751ddf662a50c108852374998df27524",
     "url": "/nem2-wallet-workshop-answer/index.html"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/nem2-wallet-workshop-answer/css/chunk-vendors.8c3d7e06.css"
   },
   {
-    "revision": "e3f9f4c49d1bd76c8e14",
+    "revision": "f11033b7573573066ed6",
     "url": "/nem2-wallet-workshop-answer/css/app.5ba681b1.css"
   }
 ];
